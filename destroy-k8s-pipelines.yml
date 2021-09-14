@@ -14,18 +14,6 @@ steps:
 
 - task: TerraformCLI@0
   inputs:
-    command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure'
-    backendType: 'azurerm'
-    backendServiceArm: 'azure-service-connection'
-    ensureBackend: true
-    backendAzureRmResourceGroupName: 'sxp-storage-resource-group'
-    backendAzureRmResourceGroupLocation: 'westus'
-    backendAzureRmStorageAccountName: 'sxpstorageaccount1'
-    backendAzureRmContainerName: 'sxpstoragecontainer1'
-    backendAzureRmKey: 'k8.tfstate'
-- task: TerraformCLI@0
-  inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure'
     environmentServiceName: 'azure-service-connection'
