@@ -26,6 +26,8 @@ steps:
     backendAzureRmResourceGroupName: 'sxp-storage-resource-group'
     backendAzureRmResourceGroupLocation: 'westus'
     backendAzureRmStorageAccountName: 'sxpstorageaccount1'
+    backendAzureRmContainerName: 'sxpstoragecontainer1'
+    backendAzureRmKey: 'k8.tfstate'
     allowTelemetryCollection: true
 - task: TerraformCLI@0
   inputs:
