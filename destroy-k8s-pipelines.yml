@@ -19,10 +19,10 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azure-service-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'backend-rg'
+    backendAzureRmResourceGroupName: 'sxp-storage-resource-group'
     backendAzureRmResourceGroupLocation: 'eastus'
-    backendAzureRmStorageAccountName: 'storageacctnamexm1'
-    backendAzureRmContainerName: 'storageaccntcon'
+    backendAzureRmStorageAccountName: 'sxpstorageaccount1'
+    backendAzureRmContainerName: 'sxpstoragecontainer1'
     backendAzureRmKey: 'k8.tfstate'
 - task: TerraformCLI@0
   inputs:
