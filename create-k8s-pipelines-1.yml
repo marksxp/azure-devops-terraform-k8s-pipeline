@@ -24,7 +24,7 @@ steps:
     backendServiceArm: 'azure-service-connection'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'sxp-storage-resource-group'
-    backendAzureRmResourceGroupLocation: 'eastus'
+    backendAzureRmResourceGroupLocation: 'westus'
     backendAzureRmStorageAccountName: 'sxpstorageaccount1'
     allowTelemetryCollection: true
 - task: TerraformCLI@0
