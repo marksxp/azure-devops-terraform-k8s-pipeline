@@ -11,7 +11,17 @@ steps:
   name: publickey
   inputs:
     secureFile: 'azure_rsa.pub'
-
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure'
+    backendType: 'azurerm'
+    backendServiceArm: 'azure-service-connection'
+    backendAzureRmResourceGroupName: 'sxp-storage-resource-group'
+    backendAzureRmStorageAccountName: 'sxpstorageaccount1'
+    backendAzureRmContainerName: 'sxpstoragecontainer1'
+    backendAzureRmKey: 'k8.tfstate'
+    allowTelemetryCollection: true
 - task: TerraformCLI@0
   inputs:
     command: 'destroy'
