@@ -20,7 +20,7 @@ steps:
     backendServiceArm: 'azure-service-connection'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'sxp-storage-resource-group'
-    backendAzureRmResourceGroupLocation: 'eastus'
+    backendAzureRmResourceGroupLocation: 'westus'
     backendAzureRmStorageAccountName: 'sxpstorageaccount1'
     backendAzureRmContainerName: 'sxpstoragecontainer1'
     backendAzureRmKey: 'k8.tfstate'
