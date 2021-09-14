@@ -22,7 +22,7 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure'
     backendType: 'azurerm'
     backendServiceArm: 'azure-service-connection'
-    ensureBackend: true
+    ensureBackend: false
     allowTelemetryCollection: true
 - task: TerraformCLI@0
   inputs:
