@@ -24,8 +24,15 @@ steps:
     allowTelemetryCollection: true
 - task: TerraformCLI@0
   inputs:
+    command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure'
+    environmentServiceName: 'azure-service-connection'
+    commandOptions: '-destroy -out vnet.destroy.tfplan'
+    allowTelemetryCollection: true
+- task: TerraformCLI@0
+  inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure'
     environmentServiceName: 'azure-service-connection'
-    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
+    commandOptions: '-destroy -auto-approve vnet.destroy.tfplan'
     allowTelemetryCollection: true
