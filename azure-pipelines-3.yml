@@ -1,11 +1,6 @@
 trigger:
-- main
-
-resources:
-- repo: self
-
-variables:
-  tag: '$(Build.BuildId)'
+- master
 
 stages:
 - stage: Build
+  displayName: Build image
